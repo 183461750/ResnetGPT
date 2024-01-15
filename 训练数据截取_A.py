@@ -1,7 +1,7 @@
 import os
 import time
 import torchvision
-from config import GPT2Config, TransformerConfig
+from config import GPT2Config, TransformerConfig, CustomConfig
 from Batch import create_masks
 from ModelA import get_model
 import torch.nn.functional as F
@@ -9,13 +9,16 @@ from 取训练数据 import *
 from 杂项 import *
 import random
 from resnet_utils import myResnet
-from 运行辅助 import *
+from 运行辅助1 import *
 from pynput.keyboard import Controller, Key, Listener
 from pynput import keyboard
 import time, threading
 
-_DEVICE_ID = '68UDU17B14011947'
-窗口名称="RNE-AL00"
+_DEVICE_ID = CustomConfig.DEVICE_ID
+# _DEVICE_ID = '192.168.1.55:5555'
+# _DEVICE_ID = '20919c2b'
+窗口名称=CustomConfig.窗口名称
+# 窗口名称="M2012K11AC"
 模型名称= 'model_weights_O35'
 训练数据保存目录='../训练数据样本'
 if not os.path.exists(训练数据保存目录):
@@ -196,16 +199,10 @@ model = model.cuda(device).requires_grad_(False)
 while True:
     if AI打开 :
 
-
-
-
-
         图片路径=训练数据保存目录+'/{}/'.format(str(int( time.time())) )
         os.mkdir(图片路径)
 
         记录文件=open(图片路径+'_操作数据.json','w+')
-
-
 
         图片张量 = torch.Tensor(0)
         操作张量 = torch.Tensor(0)

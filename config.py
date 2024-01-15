@@ -56,3 +56,14 @@ class GPT2Config(object):
         self.n_head = n_head
         self.layer_norm_epsilon = layer_norm_epsilon
         self.initializer_range = initializer_range
+
+
+class CustomConfig(object):
+    # DEVICE_ID = '434f0b60' # 平板
+    # _DEVICE_ID = '192.168.1.31:5555'
+    # DEVICE_ID = '20919c2b' # 红米手机
+    # _DEVICE_ID = '192.168.1.55:5555'
+    DEVICE_ID = '434f0b60'
+    # 窗口名称="M2012K11AC"  # 红米手机
+    # 窗口名称="23046RP50C" # 平板
+    窗口名称="M2012K11AC"

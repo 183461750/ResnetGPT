@@ -1,0 +1,5 @@
+torchvision
+torchtext==0.6.0
+pyobjc-framework-Quartz
+pyminitouch
+pynput

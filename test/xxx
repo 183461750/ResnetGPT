@@ -1,0 +1,4 @@
+>adb shell am startservice -a jp.co.cyberagent.stf.ACTION_START -n jp.co.cyberagent.stf/.Service
+Output: Starting service: Intent { act=jp.co.cyberagent.stf.ACTION_START cmp=jp.co.cyberagent.stf/.Service }
+>adb forward tcp:1100 localabstract:stfservice
+Output: 1100
